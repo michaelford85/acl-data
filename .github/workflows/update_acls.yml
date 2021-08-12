@@ -29,7 +29,7 @@ jobs:
 
     - name: Add new ACLs
       run: |
-        curl --location --request POST 'https://controller.mford.io/api/v2/job_templates/11/launch/' \
+        curl --location --request POST 'https://controller.mford.io/api/v2/workflow_job_templates/13/launch/' \
           --header 'Content-Type: application/json' \
           --header 'Authorization: Basic ${{ secrets.CONTROLLER_BASIC_AUTH }}' \
           --data-raw '{
