@@ -1,0 +1,27 @@
+name: Deploy Hugo Site
+
+on:
+  push:
+  # pull_request:
+    branches:
+    - main
+    # paths:
+    #   - 'global/acl_entries_to_apply.csv'
+
+jobs:
+  deploy:
+
+    runs-on: ubuntu-20.04
+    steps:  
+    - name: Remove existing ACLs in preparation to add the new ones
+      run: |
+        curl --location --request POST 'https://controller.mford.io/api/v2/job_templates/11/launch/' \
+          --header 'Content-Type: application/json' \
+          --header 'Authorization: Basic ${{ secrets.CONTROLLER_BASIC_AUTH }}' \
+          --data-raw '{
+                        "extra_vars":
+                        {
+                          "policy_state": "add"
+                        }
+                      }'
+      shell: bash
