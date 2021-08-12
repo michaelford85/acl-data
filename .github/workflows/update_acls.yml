@@ -1,4 +1,4 @@
-name: Deploy Hugo Site
+name: Palo Alto Firewalls NetDevOps
 
 on:
   push:
