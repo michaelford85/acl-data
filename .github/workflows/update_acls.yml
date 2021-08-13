@@ -8,13 +8,13 @@ on:
       - 'global/acl_entries_to_apply.csv'
 
 jobs:
-  deploy:
+  panos_update:
 
     runs-on: ubuntu-20.04
 
     steps:  
     
-    - name: Remove existing ACLs in preparation to add the new ones
+    - name: Update ACLs on Palo Alto Firewalls
       run: |
         curl --location --request POST 'https://controller.mford.io/api/v2/workflow_job_templates/14/launch/' \
           --header 'Content-Type: application/json' \
