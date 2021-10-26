@@ -16,7 +16,7 @@ jobs:
     
     - name: Update ACLs on Palo Alto Firewalls
       run: |
-        curl --location --request POST 'https://controller.mford.io/api/v2/workflow_job_templates/14/launch/' \
+        curl --location --request POST 'https://controller.apps.mford-cluster.mford.io/api/v2/workflow_job_templates/17/launch/' \
           --header 'Content-Type: application/json' \
           --header 'Authorization: Basic ${{ secrets.CONTROLLER_BASIC_AUTH }}'
       shell: bash
