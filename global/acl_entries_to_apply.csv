@@ -4,5 +4,4 @@ WebDMZ,WebDMZ,any,10.10.10.1-10.10.10.255,any,any,allow
 Telnet,Telnet,any,10.10.20.1-10.10.20.255,any,any,allow
 Mail,Mail,10.1.1.1-10.1.1.255,192.168.1.2-192.168.1.8,any,any,allow
 mford,mford,10.1.1.1-10.1.1.255,192.168.1.2-192.168.1.8,any,any,deny
-mskinner,mskinner,10.1.1.1-10.1.1.255,192.168.1.2-192.168.1.8,any,any,deny
 Deny All Rule, Deny All Rule,any,any,any,any,deny
